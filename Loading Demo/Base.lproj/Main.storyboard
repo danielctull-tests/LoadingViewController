@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Dz8-EY-giH">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="6Os-Fw-ezP">
+            <objects>
+                <navigationController id="Dz8-EY-giH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iSQ-k8-gbN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rgG-aC-lw6" kind="relationship" relationship="rootViewController" id="9Rf-Du-ack"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MPl-Q0-5Vk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="181"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mpf-cz-7y4">
+            <objects>
+                <viewController id="rgG-aC-lw6" customClass="ViewController" customModule="LoadingViewController_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Oc-3k-E9o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-3k-545">
+                                <rect key="frame" x="176.5" y="353.5" width="61" height="189"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzk-D4-2q9">
+                                        <rect key="frame" x="0.0" y="0.0" width="61" height="32"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <state key="normal" title="Success"/>
+                                        <connections>
+                                            <action selector="showSuccess:" destination="rgG-aC-lw6" eventType="touchUpInside" id="J45-I5-os0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOB-eF-Iad">
+                                        <rect key="frame" x="0.0" y="157" width="61" height="32"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <state key="normal" title="Failure"/>
+                                        <connections>
+                                            <action selector="showFailure:" destination="rgG-aC-lw6" eventType="touchUpInside" id="yKO-TE-SBb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5Fv-3k-545" firstAttribute="centerX" secondItem="1Oc-3k-E9o" secondAttribute="centerX" id="0UN-0y-alP"/>
+                            <constraint firstItem="5Fv-3k-545" firstAttribute="centerY" secondItem="1Oc-3k-E9o" secondAttribute="centerY" id="V8r-Yd-LZi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FaB-Di-33e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c1w-Kk-C7F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bR0-JZ-xiq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="181"/>
+        </scene>
+    </scenes>
+</document>
